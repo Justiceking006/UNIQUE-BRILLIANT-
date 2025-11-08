@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Unique Brilliant Schools - Where every child's unique brilliance is discovered and nurtured">
+    <title>Unique Brilliant Schools | Premier Education</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        .logo-font {
+            font-family: 'Dancing Script', cursive;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        /* Custom colors */
+        .bg-orange {
+            background-color: #FF6B35;
+        }
+        
+        .text-orange {
+            color: #FF6B35;
+        }
+        
+        .border-orange {
+            border-color: #FF6B35;
+        }
+        
+        .bg-ash {
+            background-color: #F5F5F5;
+        }
+        
+        .text-ash {
+            color: #666666;
+        }
+        
+        .bg-light-blue {
+            background-color: #E6F7FF;
+        }
+        
+        .text-light-blue {
+            color: #1890FF;
+        }
+   
+        .marquee-container {
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .marquee-content {
+            display: flex;
+            animation: marquee 25s linear infinite;
+            padding: 0 1rem;
+        }
+        
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+        
+        /* Pause animation on hover */
+        .marquee-container:hover .marquee-content {
+            animation-play-state: paused;
+        }
+        
+        /* Add a subtle fade effect on the edges */
+        .marquee-container::before,
+        .marquee-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 50px;
+            height: 100%;
+            z-index: 2;
+        }
+        
+        .marquee-container::before {
+            left: 0;
+            background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0));
+        }
+        
+        .marquee-container::after {
+            right: 0;
+            background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0));
+        }
+   
+    .stat-counter {
+        background: linear-gradient(135deg, #ffffff 0%, #ffedd5 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .progress-bar {
+        transition: width 2s ease-in-out;
+    }
+
+    /* iOS-style smooth animations */
+    @keyframes countUp {
+        from {
+            transform: translateY(20px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .stat-counter.animated {
+        animation: countUp 0.8s ease-out;
+    }
+</style>
+
+</head>
+<body class="bg-white">
+   
+<!-- Header/Navigation -->
+<header class="sticky top-0 z-50 bg-white shadow-md">
+    <div class="container mx-auto px-4 py-3">
+        <div class="flex justify-between items-center">
+            <!-- Desktop Buttons on Left -->
+            <div class="hidden md:flex items-center space-x-3">
+                <a href="login.php" class="flex items-center px-4 py-2 text-gray-700 hover:text-orange transition duration-300">
+                    <i data-lucide="log-in" class="w-4 h-4 mr-1"></i>
+                    Sign In
+                </a>
+                <a href="admission.php" class="flex items-center bg-orange text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition duration-300">
+                    <i data-lucide="user-plus" class="w-4 h-4 mr-1"></i>
+                    Admission
+                </a>
+            </div>
+            
+            <!-- Desktop Navigation - Centered 
+            <nav class="hidden md:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
+                <a href="#hero" class="text-gray-700 hover:text-orange transition duration-300">Home</a>
+                <a href="#about" class="text-gray-700 hover:text-orange transition duration-300">About Us</a>
+                <a href="#gallery" class="text-gray-700 hover:text-orange transition duration-300">Gallery</a>
+                <a href="#news" class="text-gray-700 hover:text-orange transition duration-300">News</a>
+                <a href="#contact" class="text-gray-700 hover:text-orange transition duration-300">Contact</a>
+            </nav>-->
+            
+            <!-- Logo on Right -->
+            <div class="flex items-center">
+                <a href="index.php" class="text-xl md:text-2xl logo-font text-orange font-bold">
+                    Unique Brilliant Schools
+                </a>
+            </div>
+            
+            <!-- Mobile - Only Logo and Login Button -->
+            <div class="flex md:hidden items-center space-x-3">
+                <a href="login.php" class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center shadow-lg text-sm">
+                    <i data-lucide="log-in" class="w-4 h-4 mr-1"></i>
+                    Login
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+    <!-- Main Content Area -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="relative overflow-hidden">
+            <!-- Image First -->
+            <div class="relative h-80 md:h-96 bg-gray-100">
+                <img src="logo.png" alt="Unique Brilliant Schools" class="w-full h-full object-cover">
+                
+                <!-- Overlay with SVGs -->
+                <div class="absolute inset-0 bg-black bg-opacity-30">
+                    <!-- SVG Decorations -->
+                    <svg class="absolute top-6 left-6 w-12 h-12 text-white opacity-40" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                    </svg>
+                    
+                    <svg class="absolute bottom-6 right-6 w-14 h-14 text-white opacity-40" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"></path>
+                        <path d="M12 6V12L16 14"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Content Section -->
+            <div class="relative bg-white py-12 md:py-16">
+                <div class="container mx-auto px-4">
+                    <div class="max-w-3xl mx-auto text-center" data-aos="fade-up" data-aos-duration="800">
+                        <!-- H5 -->
+                        <h5 class="text-lg md:text-xl font-semibold mb-4 text-orange-500" data-aos="fade-up" data-aos-delay="200">
+                            Welcome to Unique Brilliant Schools
+                        </h5>
+                        
+                        <!-- H1 -->
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-gray-800" data-aos="fade-up" data-aos-delay="400">
+                            Where Every Child's <span class="text-orange-500">Brilliance</span> Shines
+                        </h1>
+                        
+                        <!-- Paragraph -->
+                        <p class="text-lg md:text-xl mb-8 text-gray-600 leading-relaxed" data-aos="fade-up" data-aos-delay="600">
+                            Nurturing young minds through innovative education, personalized learning, 
+                            and a commitment to unlocking each student's unique potential in a supportive environment.
+                        </p>
+                        
+                        <!-- Buttons -->
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="800">
+                            <a href="login.php" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center shadow-lg">
+                                <i data-lucide="log-in" class="w-5 h-5 mr-2"></i>
+                                Login to Portal
+                            </a>
+                            <a href="#about" class="border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+                                <i data-lucide="compass" class="w-5 h-5 mr-2"></i>
+                                Explore Our School
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fancy Scrolling Quotes Marquee -->
+            <div class="border-t border-b border-gray-200 py-3 bg-gradient-to-r from-gray-50 to-white overflow-hidden">
+                <div class="marquee-container">
+                    <div class="marquee-content flex space-x-8 items-center">
+                        <!-- Quotes that will scroll continuously -->
+                        <span class="text-sm text-gray-500 italic whitespace-nowrap">"Education is the best legacy"</span>
+                        <span class="text-sm text-gray-500 italic whitespace-nowrap">•</span>
+                        <span class="text-sm text-gray-500 italic whitespace-nowrap">"Education is expensive, try ignorance"</span>
+                        <span class="text-sm text-gray-500 italic whitespace-nowrap">•</span>
+                        <span class="text-sm text-gray-500 italic whitespace-nowrap">"Knowledge is power"</span>
+                        <span class="text-sm text-gray-500 italic whitespace-nowrap">•</span>
+                        <span class="text-sm text-gray-500 italic whitespace-nowrap">"The future belongs to the learned"</span>
+                        <span class="text-sm text-gray-500 italic whitespace-nowrap">•</span>
+                        <span class="text-sm text-gray-500 italic whitespace-nowrap">"A mind is a terrible thing to waste"</span>
+                        <span class="text-sm text-gray-500 italic whitespace-nowrap">•</span>
+                        <span class="text-sm text-gray-500 italic whitespace-nowrap">"Learning never exhausts the mind"</span>
+                        <span class="text-sm text-gray-500 italic whitespace-nowrap">•</span>
+                        <span class="text-sm text-gray-500 italic whitespace-nowrap">"Education breeds confidence"</span>
+                        <span class="text-sm text-gray-500 italic whitespace-nowrap">•</span>
+                        <!-- Duplicate for seamless loop -->
+                        <span class="text-sm text-gray-500 italic whitespace-nowrap">"Education is the best legacy"</span>
+                        <span class="text-sm text-gray-500 italic whitespace-nowrap">•</span>
+                        <span class="text-sm text-gray-500 italic whitespace-nowrap">"Education is expensive, try ignorance"</span>
+                        <span class="text-sm text-gray-500 italic whitespace-nowrap">•</span>
+                        <span class="text-sm text-gray-500 italic whitespace-nowrap">"Knowledge is power"</span>
+                        <span class="text-sm text-gray-500 italic whitespace-nowrap">•</span>
+                        <span class="text-sm text-gray-500 italic whitespace-nowrap">"The future belongs to the learned"</span>
+                        <span class="text-sm text-gray-500 italic whitespace-nowrap">•</span>
+                        <span class="text-sm text-gray-500 italic whitespace-nowrap">"A mind is a terrible thing to waste"</span>
+                        <span class="text-sm text-gray-500 italic whitespace-nowrap">•</span>
+                        <span class="text-sm text-gray-500 italic whitespace-nowrap">"Learning never exhausts the mind"</span>
+                        <span class="text-sm text-gray-500 italic whitespace-nowrap">•</span>
+                        <span class="text-sm text-gray-500 italic whitespace-nowrap">"Education breeds confidence"</span>
+                        <span class="text-sm text-gray-500 italic whitespace-nowrap">•</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Us Section -->
+<section id="about" class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Image Column -->
+            <div class="relative" data-aos="fade-right">
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                    <img src="about-image.jpg" alt="Students learning at Unique Brilliant Schools" 
+                         class="w-full h-80 object-cover">
+                    <div class="absolute inset-0 bg-orange-500 opacity-10"></div>
+                </div>
+                
+                <!-- Stats Card Overlay -->
+                <div class="absolute -bottom-6 -right-6 bg-white rounded-xl shadow-xl p-6 border border-gray-100" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-orange-500">15+</div>
+                        <div class="text-sm text-gray-600 font-medium">Years of Excellence</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Column -->
+            <div class="lg:pl-8" data-aos="fade-left">
+                <h5 class="text-orange-500 font-semibold mb-3 text-lg">About Our School</h5>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                    Nurturing <span class="text-orange-500">Future Leaders</span> Since 2008
+                </h2>
+                
+                <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                    At Unique Brilliant Schools, we believe every child possesses unique talents waiting to be discovered. 
+                    Our innovative approach to education focuses on personalized learning paths that cater to individual strengths and interests.
+                </p>
+                
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                    With state-of-the-art facilities and dedicated educators, we create an environment where students 
+                    don't just learn—they thrive, innovate, and become confident problem-solvers ready for the challenges of tomorrow.
+                </p>
+
+                <!-- Features List -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                    <div class="flex items-center space-x-3">
+                        <div class="bg-orange-100 p-2 rounded-lg">
+                            <i data-lucide="award" class="w-5 h-5 text-orange-500"></i>
+                        </div>
+                        <span class="text-gray-700 font-medium">Qualified Teachers</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="bg-orange-100 p-2 rounded-lg">
+                            <i data-lucide="users" class="w-5 h-5 text-orange-500"></i>
+                        </div>
+                        <span class="text-gray-700 font-medium">Small Class Sizes</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="bg-orange-100 p-2 rounded-lg">
+                            <i data-lucide="flask" class="w-5 h-5 text-orange-500"></i>
+                        </div>
+                        <span class="text-gray-700 font-medium">Modern Laboratories</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="bg-orange-100 p-2 rounded-lg">
+                            <i data-lucide="heart" class="w-5 h-5 text-orange-500"></i>
+                        </div>
+                        <span class="text-gray-700 font-medium">Inclusive Environment</span>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <a href="#admissions" class="inline-flex items-center bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    <i data-lucide="book-open" class="w-5 h-5 mr-2"></i>
+                    Learn More About Us
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Founders Section -->
+<section id="founders" class="py-16 md:py-24 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h5 class="text-orange-500 font-semibold mb-3 text-lg">Meet Our Founders</h5>
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                The Visionaries Behind Our Success
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Dedicated to transforming education through passion and purpose
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            <!-- Mr. Oke -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100" data-aos="fade-right">
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-6 mb-6">
+                    <div class="relative">
+                        <img src="f2.jpg" alt="Mr. Oke - Founder" 
+                             class="w-32 h-32 md:w-40 md:h-40 object-cover rounded-2xl shadow-md">
+                        <div class="absolute -bottom-2 -right-2 bg-orange-500 text-white p-2 rounded-full">
+                            <i data-lucide="user" class="w-4 h-4"></i>
+                        </div>
+                    </div>
+                    <div class="text-center md:text-left">
+                        <h3 class="text-2xl font-bold text-gray-800">Mr. Oke</h3>
+                        <p class="text-orange-500 font-semibold">Co-Founder & Director</p>
+                        <div class="flex justify-center md:justify-start space-x-2 mt-2">
+                            <div class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium">
+                                Visionary
+                            </div>
+                            <div class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium">
+                                Leader
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600 leading-relaxed">
+                    With over 20 years of experience in educational leadership, Mr. Oke brings strategic vision 
+                    and unwavering dedication to creating an environment where every child can excel. His passion 
+                    for innovative teaching methods has shaped our unique approach to education.
+                </p>
+            </div>
+
+            <!-- Mrs. Oke -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100" data-aos="fade-left">
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-6 mb-6">
+                    <div class="relative">
+                        <img src="f1.jpg" alt="Mrs. Oke - Founder" 
+                             class="w-32 h-32 md:w-40 md:h-40 object-cover rounded-2xl shadow-md">
+                        <div class="absolute -bottom-2 -right-2 bg-orange-500 text-white p-2 rounded-full">
+                            <i data-lucide="user" class="w-4 h-4"></i>
+                        </div>
+                    </div>
+                    <div class="text-center md:text-left">
+                        <h3 class="text-2xl font-bold text-gray-800">Mrs. Oke</h3>
+                        <p class="text-orange-500 font-semibold">Co-Founder & Academic Director</p>
+                        <div class="flex justify-center md:justify-start space-x-2 mt-2">
+                            <div class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium">
+                                Educator
+                            </div>
+                            <div class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium">
+                                Mentor
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600 leading-relaxed">
+                    Mrs. Oke's background in child psychology and curriculum development ensures that our 
+                    educational approach is both scientifically sound and emotionally supportive. She believes 
+                    that nurturing a child's emotional well-being is as important as their academic growth.
+                </p>
+            </div>
+        </div>
+
+        <!-- Joint Message -->
+        <div class="mt-12 bg-white rounded-2xl p-8 shadow-lg border border-gray-100" data-aos="fade-up">
+            <div class="text-center max-w-4xl mx-auto">
+                <div class="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i data-lucide="heart" class="w-8 h-8 text-orange-500"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Our Shared Vision</h3>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    "Together, we've built Unique Brilliant Schools on the foundation that every child deserves 
+                    an education that recognizes their individual strengths. Our greatest joy comes from watching 
+                    students discover passions they never knew they had and develop into confident, capable individuals 
+                    ready to make their mark on the world."
+                </p>
+                <div class="flex items-center justify-center space-x-4">
+                    <div class="text-sm text-gray-500">— Mr. & Mrs. Oke</div>
+                    <div class="w-1 h-1 bg-orange-300 rounded-full"></div>
+                    <div class="text-sm text-gray-500">Founders</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section id="why-choose-us" class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h5 class="text-orange-500 font-semibold mb-3 text-lg">Why Choose Us</h5>
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                Excellence in <span class="text-orange-500">Education</span>
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Discover what makes Unique Brilliant Schools the perfect choice for your child's educational journey
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            <!-- Feature 1 -->
+            <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-orange-100 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <i data-lucide="graduation-cap" class="w-10 h-10 text-orange-500"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Qualified Educators</h3>
+                <p class="text-gray-600">
+                    Our certified teachers are passionate about nurturing young minds with modern teaching methodologies
+                </p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-orange-100 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <i data-lucide="users" class="w-10 h-10 text-orange-500"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Small Class Sizes</h3>
+                <p class="text-gray-600">
+                    Personalized attention with student-teacher ratio that ensures every child gets the focus they deserve
+                </p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-orange-100 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <i data-lucide="flask" class="w-10 h-10 text-orange-500"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Modern Facilities</h3>
+                <p class="text-gray-600">
+                    State-of-the-art laboratories, libraries, and sports facilities for holistic development
+                </p>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                <div class="bg-orange-100 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <i data-lucide="heart" class="w-10 h-10 text-orange-500"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Inclusive Environment</h3>
+                <p class="text-gray-600">
+                    A welcoming community that celebrates diversity and fosters emotional well-being
+                </p>
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <!-- iOS Style Stats Section -->
+<div class="relative" data-aos="zoom-in">
+    <!-- Background with subtle gradient and blur effect -->
+    <div class="bg-gradient-to-br from-orange-400 via-orange-500 to-orange-600 rounded-3xl p-8 md:p-12 text-white relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-32 h-32 bg-white rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute bottom-0 right-0 w-40 h-40 bg-white rounded-full translate-x-1/2 translate-y-1/2"></div>
+            <div class="absolute top-1/2 left-1/2 w-24 h-24 bg-white rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+        </div>
+        
+        <!-- Glass Morphism Container -->
+        <div class="relative bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 md:p-10">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
+                <!-- Stat 1 -->
+                <div class="group">
+                    <div class="relative">
+                        <!-- Animated Counter -->
+                        <div class="text-4xl md:text-5xl font-bold mb-3 text-white drop-shadow-lg stat-counter" data-target="500">0</div>
+                        <div class="text-orange-100 font-medium text-sm md:text-base tracking-wide">Students Enrolled</div>
+                        <!-- Hover Effect -->
+                        <div class="absolute -inset-2 bg-white/10 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+                    </div>
+                    <!-- Progress Bar -->
+                    <div class="mt-3 w-12 h-1 bg-white/30 rounded-full mx-auto overflow-hidden">
+                        <div class="h-full bg-white rounded-full progress-bar" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <!-- Stat 2 -->
+                <div class="group">
+                    <div class="relative">
+                        <div class="text-4xl md:text-5xl font-bold mb-3 text-white drop-shadow-lg stat-counter" data-target="98">0</div>
+                        <div class="text-orange-100 font-medium text-sm md:text-base tracking-wide">Success Rate</div>
+                        <div class="absolute -inset-2 bg-white/10 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+                    </div>
+                    <div class="mt-3 w-12 h-1 bg-white/30 rounded-full mx-auto overflow-hidden">
+                        <div class="h-full bg-white rounded-full progress-bar" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <!-- Stat 3 -->
+                <div class="group">
+                    <div class="relative">
+                        <div class="text-4xl md:text-5xl font-bold mb-3 text-white drop-shadow-lg stat-counter" data-target="25">0</div>
+                        <div class="text-orange-100 font-medium text-sm md:text-base tracking-wide">Qualified Staff</div>
+                        <div class="absolute -inset-2 bg-white/10 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+                    </div>
+                    <div class="mt-3 w-12 h-1 bg-white/30 rounded-full mx-auto overflow-hidden">
+                        <div class="h-full bg-white rounded-full progress-bar" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <!-- Stat 4 -->
+                <div class="group">
+                    <div class="relative">
+                        <div class="text-4xl md:text-5xl font-bold mb-3 text-white drop-shadow-lg stat-counter" data-target="15">0</div>
+                        <div class="text-orange-100 font-medium text-sm md:text-base tracking-wide">Years Experience</div>
+                        <div class="absolute -inset-2 bg-white/10 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+                    </div>
+                    <div class="mt-3 w-12 h-1 bg-white/30 rounded-full mx-auto overflow-hidden">
+                        <div class="h-full bg-white rounded-full progress-bar" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating Icons -->
+        <div class="absolute top-6 right-6 opacity-20">
+            <i data-lucide="star" class="w-8 h-8 text-white"></i>
+        </div>
+        <div class="absolute bottom-6 left-6 opacity-20">
+            <i data-lucide="award" class="w-8 h-8 text-white"></i>
+        </div>
+    </div>
+</div>
+
+
+
+        <!-- CTA Section -->
+        <div class="text-center mt-16" data-aos="fade-up">
+            <h3 class="text-3xl font-bold text-gray-800 mb-6">Ready to Join Our Community?</h3>
+            <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                Take the first step towards an exceptional educational experience for your child
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="admission.php" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center shadow-lg">
+                    <i data-lucide="user-plus" class="w-5 h-5 mr-2"></i>
+                    Apply for Admission
+                </a>
+                <a href="#contact" class="border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+                    <i data-lucide="phone" class="w-5 h-5 mr-2"></i>
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Section -->
+<section id="gallery" class="py-16 md:py-24 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h5 class="text-orange-500 font-semibold mb-3 text-lg">Our Gallery</h5>
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                Sports & <span class="text-orange-500">Activities</span>
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Capturing the energy, teamwork, and joy of our students in various sports and extracurricular activities
+            </p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="flex flex-wrap justify-center gap-4 mb-12" data-aos="fade-up">
+            <button class="filter-btn active px-6 py-3 rounded-full bg-orange-500 text-white font-semibold transition-all duration-300 hover:scale-105" data-filter="all">
+                All Activities
+            </button>
+            <button class="filter-btn px-6 py-3 rounded-full bg-white text-gray-700 border border-gray-300 font-semibold transition-all duration-300 hover:scale-105 hover:border-orange-500" data-filter="sports">
+                Sports
+            </button>
+            <button class="filter-btn px-6 py-3 rounded-full bg-white text-gray-700 border border-gray-300 font-semibold transition-all duration-300 hover:scale-105 hover:border-orange-500" data-filter="outdoor">
+                Outdoor Games
+            </button>
+            <button class="filter-btn px-6 py-3 rounded-full bg-white text-gray-700 border border-gray-300 font-semibold transition-all duration-300 hover:scale-105 hover:border-orange-500" data-filter="indoor">
+                Indoor Activities
+            </button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="gallery-grid">
+            <!-- Sports Images -->
+            <div class="gallery-item sports" data-aos="zoom-in" data-category="sports">
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer transform transition-all duration-500 hover:scale-105">
+                    <img src="sports-1.jpg" alt="Students playing football at Unique Brilliant Schools sports field" 
+                         class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-6">
+                        <div class="text-white">
+                            <h3 class="font-bold text-lg mb-1">Football Team</h3>
+                            <p class="text-sm text-gray-200">Building teamwork and sportsmanship</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item sports" data-aos="zoom-in" data-aos-delay="100" data-category="sports">
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer transform transition-all duration-500 hover:scale-105">
+                    <img src="sports-2.jpg" alt="Basketball practice session at Unique Brilliant Schools court" 
+                         class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-6">
+                        <div class="text-white">
+                            <h3 class="font-bold text-lg mb-1">Basketball Practice</h3>
+                            <p class="text-sm text-gray-200">Developing coordination and skills</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Outdoor Games -->
+            <div class="gallery-item outdoor" data-aos="zoom-in" data-aos-delay="200" data-category="outdoor">
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer transform transition-all duration-500 hover:scale-105">
+                    <img src="outdoor-1.jpg" alt="Students enjoying athletics and track events at school sports day" 
+                         class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-6">
+                        <div class="text-white">
+                            <h3 class="font-bold text-lg mb-1">Athletics Day</h3>
+                            <p class="text-sm text-gray-200">Track and field competitions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item outdoor" data-aos="zoom-in" data-aos-delay="300" data-category="outdoor">
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer transform transition-all duration-500 hover:scale-105">
+                    <img src="outdoor-2.jpg" alt="Playground activities and recreational games for students" 
+                         class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-6">
+                        <div class="text-white">
+                            <h3 class="font-bold text-lg mb-1">Playground Fun</h3>
+                            <p class="text-sm text-gray-200">Recreational games and activities</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Indoor Activities -->
+            <div class="gallery-item indoor" data-aos="zoom-in" data-category="indoor">
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer transform transition-all duration-500 hover:scale-105">
+                    <img src="indoor-1.jpg" alt="Indoor sports and games in school activity room" 
+                         class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-6">
+                        <div class="text-white">
+                            <h3 class="font-bold text-lg mb-1">Indoor Games</h3>
+                            <p class="text-sm text-gray-200">Table tennis and board games</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item indoor" data-aos="zoom-in" data-aos-delay="100" data-category="indoor">
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer transform transition-all duration-500 hover:scale-105">
+                    <img src="indoor-2.jpg" alt="Dance and cultural activities during indoor events" 
+                         class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-6">
+                        <div class="text-white">
+                            <h3 class="font-bold text-lg mb-1">Cultural Dance</h3>
+                            <p class="text-sm text-gray-200">Performing arts and creativity</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More Sports Images -->
+            <div class="gallery-item sports" data-aos="zoom-in" data-aos-delay="200" data-category="sports">
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer transform transition-all duration-500 hover:scale-105">
+                    <img src="sports-3.jpg" alt="Swimming lessons and water sports activities" 
+                         class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-6">
+                        <div class="text-white">
+                            <h3 class="font-bold text-lg mb-1">Swimming Lessons</h3>
+                            <p class="text-sm text-gray-200">Water safety and swimming skills</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item sports" data-aos="zoom-in" data-aos-delay="300" data-category="sports">
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer transform transition-all duration-500 hover:scale-105">
+                    <img src="sports-4.jpg" alt="Victory celebration after sports competition" 
+                         class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-6">
+                        <div class="text-white">
+                            <h3 class="font-bold text-lg mb-1">Victory Celebration</h3>
+                            <p class="text-sm text-gray-200">Celebrating achievements together</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center mt-16" data-aos="fade-up">
+            <p class="text-xl text-gray-600 mb-6">Interested in our sports programs?</p>
+            <a href="#contact" class="inline-flex items-center bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+                <i data-lucide="trophy" class="w-5 h-5 mr-2"></i>
+                Join Our Sports Teams
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="py-16 md:py-24 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h5 class="text-orange-500 font-semibold mb-3 text-lg">Happy Parents</h5>
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                What Parents <span class="text-orange-500">Say</span>
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Real feedback from our school community
+            </p>
+        </div>
+
+        <!-- Testimonials Marquee -->
+        <div class="border-t border-b border-gray-200 py-8 bg-gradient-to-r from-white to-gray-50 overflow-hidden">
+            <div class="marquee-container">
+                <div class="marquee-content flex space-x-12 items-center">
+                    <!-- Testimonial 1 -->
+                    <div class="flex items-center space-x-4 whitespace-nowrap">
+                        <div class="flex text-orange-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <span class="text-sm text-gray-600 italic">"Our daughter has blossomed since joining this school!"</span>
+                    </div>
+
+                    <div class="text-gray-300">•</div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="flex items-center space-x-4 whitespace-nowrap">
+                        <div class="flex text-orange-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <span class="text-sm text-gray-600 italic">"The teachers' dedication is exceptional and transformative."</span>
+                    </div>
+
+                    <div class="text-gray-300">•</div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="flex items-center space-x-4 whitespace-nowrap">
+                        <div class="flex text-orange-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <span class="text-sm text-gray-600 italic">"Best decision we made for our child's education!"</span>
+                    </div>
+
+                    <div class="text-gray-300">•</div>
+
+                    <!-- Testimonial 4 -->
+                    <div class="flex items-center space-x-4 whitespace-nowrap">
+                        <div class="flex text-orange-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <span class="text-sm text-gray-600 italic">"The sports program boosted my child's confidence immensely."</span>
+                    </div>
+
+                    <div class="text-gray-300">•</div>
+
+                    <!-- Testimonial 5 -->
+                    <div class="flex items-center space-x-4 whitespace-nowrap">
+                        <div class="flex text-orange-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <span class="text-sm text-gray-600 italic">"Communication with teachers is excellent and responsive."</span>
+                    </div>
+
+                    <!-- Duplicate for seamless loop -->
+                    <div class="flex items-center space-x-4 whitespace-nowrap">
+                        <div class="flex text-orange-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <span class="text-sm text-gray-600 italic">"Our daughter has blossomed since joining this school!"</span>
+                    </div>
+
+                    <div class="text-gray-300">•</div>
+
+                    <div class="flex items-center space-x-4 whitespace-nowrap">
+                        <div class="flex text-orange-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <span class="text-sm text-gray-600 italic">"The teachers' dedication is exceptional and transformative."</span>
+                    </div>
+
+                    <div class="text-gray-300">•</div>
+
+                    <div class="flex items-center space-x-4 whitespace-nowrap">
+                        <div class="flex text-orange-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <span class="text-sm text-gray-600 italic">"Best decision we made for our child's education!"</span>
+                    </div>
+
+                    <div class="text-gray-300">•</div>
+
+                    <div class="flex items-center space-x-4 whitespace-nowrap">
+                        <div class="flex text-orange-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <span class="text-sm text-gray-600 italic">"The sports program boosted my child's confidence immensely."</span>
+                    </div>
+
+                    <div class="text-gray-300">•</div>
+
+                    <div class="flex items-center space-x-4 whitespace-nowrap">
+                        <div class="flex text-orange-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <span class="text-sm text-gray-600 italic">"Communication with teachers is excellent and responsive."</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center mt-16" data-aos="fade-up">
+            <p class="text-xl text-gray-600 mb-6">Join our community of happy parents</p>
+            <a href="admission.php" class="inline-flex items-center bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+                <i data-lucide="user-plus" class="w-5 h-5 mr-2"></i>
+                Enroll Your Child Today
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h5 class="text-orange-500 font-semibold mb-3 text-lg">Contact Us</h5>
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                Get In <span class="text-orange-500">Touch</span>
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Reach out to us for admissions, inquiries, or to schedule a campus visit
+            </p>
+        </div>
+
+        <div class="max-w-4xl mx-auto">
+            <!-- WhatsApp Contact -->
+            <div class="text-center mb-12" data-aos="fade-up">
+                <div class="bg-green-50 rounded-2xl p-8 border border-green-200">
+                    <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="message-circle" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">WhatsApp</h3>
+                    <p class="text-gray-600 mb-4">Quick responses for admissions and inquiries</p>
+                    <a href="https://wa.me/2348052477420" 
+                       class="inline-flex items-center bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+                        <i data-lucide="message-circle" class="w-5 h-5 mr-2"></i>
+                        +234 805 247 7420
+                    </a>
+                </div>
+            </div>
+
+            <!-- Simple Contact Info -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8" data-aos="fade-up">
+                <div class="text-center">
+                    <div class="bg-orange-50 rounded-2xl p-6 border border-orange-200">
+                        <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="phone" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Call Us</h3>
+                        <p class="text-gray-600">Available during school hours</p>
+                        <div class="mt-4 text-lg font-semibold text-orange-500">
+                            +234 805 247 7420
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg-orange-50 rounded-2xl p-6 border border-orange-200">
+                        <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="clock" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Office Hours</h3>
+                        <p class="text-gray-600">Monday - Friday</p>
+                        <div class="mt-4 text-lg font-semibold text-orange-500">
+                            8:00 AM - 4:00 PM
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <!-- Logo and Info -->
+            <div>
+                <a href="index.php" class="text-2xl logo-font text-orange-400 font-bold mb-4 inline-block">
+                    Unique Brilliant Schools
+                </a>
+                <p class="text-gray-300 mb-4">
+                    Where every child's unique brilliance is discovered and nurtured
+                </p>
+                <div class="flex items-center space-x-2 text-gray-300">
+                    <i data-lucide="phone" class="w-4 h-4"></i>
+                    <span>+234 805 247 7420</span>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="text-right">
+                <h3 class="text-lg font-semibold mb-4 text-orange-400">Quick Links</h3>
+                <div class="flex flex-col space-y-2">
+                    <a href="#hero" class="text-gray-300 hover:text-orange-400 transition duration-300">Home</a>
+                    <a href="#about" class="text-gray-300 hover:text-orange-400 transition duration-300">About Us</a>
+                    <a href="#gallery" class="text-gray-300 hover:text-orange-400 transition duration-300">Gallery</a>
+                    <a href="#contact" class="text-gray-300 hover:text-orange-400 transition duration-300">Contact</a>
+                    <a href="admission.php" class="text-orange-400 hover:text-orange-300 transition duration-300 font-semibold">Admission</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+            <p class="text-gray-400">
+                &copy; 2024 Unique Brilliant Schools. All rights reserved.
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+        
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.querySelector('#mobile-menu-button i');
+            
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.setAttribute('data-lucide', 'x');
+            } else {
+                menu.classList.add('hidden');
+                icon.setAttribute('data-lucide', 'menu');
+            }
+            
+            // Re-initialize the icon
+            lucide.createIcons();
+        });
+    </script>
+    
+<script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Animated counter with progress bars
+    function animateCounters() {
+        const counters = document.querySelectorAll('.stat-counter');
+        const progressBars = document.querySelectorAll('.progress-bar');
+        
+        counters.forEach((counter, index) => {
+            const target = parseInt(counter.getAttribute('data-target'));
+            const duration = 2000; // 2 seconds
+            const step = target / (duration / 16); // 60fps
+            let current = 0;
+            
+            const timer = setInterval(() => {
+                current += step;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                    
+                    // Animate progress bar after counter completes
+                    setTimeout(() => {
+                        progressBars[index].style.width = '100%';
+                    }, 200);
+                }
+                
+                // Add '+' for non-percentage values
+                if (index !== 1) { // Don't add '+' to percentage (98%)
+                    counter.textContent = Math.floor(current) + '+';
+                } else {
+                    counter.textContent = Math.floor(current) + '%';
+                }
+                
+                // Add animation class
+                counter.classList.add('animated');
+                
+            }, 16);
+        });
+    }
+
+    // Start animation when section is in viewport
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounters();
+                observer.unobserve(entry.target);
+            }
+        });
+    });
+
+    // Observe the stats section
+    const statsSection = document.querySelector('[data-aos="zoom-in"]');
+    if (statsSection) {
+        observer.observe(statsSection);
+    }
+</script>
+    
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    </script>
+    
+<script>
+    // Gallery Filter Functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('active', 'bg-orange-500', 'text-white');
+                    btn.classList.add('bg-white', 'text-gray-700', 'border', 'border-gray-300');
+                });
+
+                // Add active class to clicked button
+                this.classList.add('active', 'bg-orange-500', 'text-white');
+                this.classList.remove('bg-white', 'text-gray-700', 'border', 'border-gray-300');
+
+                const filterValue = this.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 50);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.8)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+// Remove sports/ path from all gallery images
+document.addEventListener('DOMContentLoaded', function() {
+    // Update all gallery image paths
+    const galleryImages = document.querySelectorAll('#gallery-grid img[src^="sports/"]');
+    
+    galleryImages.forEach(img => {
+        // Remove 'sports/' from the beginning of the src
+        const currentSrc = img.getAttribute('src');
+        const newSrc = currentSrc.replace('sports/', '');
+        img.setAttribute('src', newSrc);
+    });
+    
+    console.log('Updated image paths:', galleryImages.length + ' images modified');
+});
+        // Initialize Lucide icons
+        lucide.createIcons();
+    });
+</script>
+
+</body>
+</html>
